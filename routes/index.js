@@ -2,12 +2,12 @@ const express = require('express')
 const router = express.Router()
 
 router.get("/", (req, res) => {
-    res.render('index.njk', { title: 'Hello from template' })
+    res.render('index.njk', { title: 'Miltons borgar restaurang' })
 })
 
-router.get("/williambirthday", (request, response) => {
-    console.log(request)
-    response.send('happy birthday')
+router.get("/about", (request, response) => {
+    response.render('about.njk', { title: 'About' })
+    
 })
 
 router.get("/tre", (req, res) => {
