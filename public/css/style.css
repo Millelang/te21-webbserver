@@ -15,6 +15,9 @@ img {
     gap: 1rem;
     list-style: none;
     text-decoration: none;
+    position:fixed;
+    top: 0;
+    
 }
 
 a {
