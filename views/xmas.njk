@@ -1,19 +1,29 @@
 {% extends 'layout.njk' %}
 {% block content %}
-<main class="container">
+<main class="not-sidebar region flow">
     <h1>{{ title }} </h1>
     <form action="/xmas" method="post">
-        <label for="name">Namn</label>
+        <label for="name">Hur mycket mulch vill du ha</label>
         <input type="text" name="name" id="name" required>
-        <label for="greeting">Hälsning</label>
-        <input type="text" name="greeting" id="greeting" required>
+        <label for="vikt">Kilo eller hekto</label>
+        <input type="text" name="vikt" id="vikt" required>
         <button type="submit">Skicka</button>
     </form>
 
+
+<script>
+     vikt = document.querySelector('vikt')
+    if (vikt === 'kilo') {
+        vikt = 'kilo';
+    } else {
+        vikt = 'hekto';
+    }
+</script>
+
     <div class="card xmas">
-        <p>{{ greeting }}</p>
-        <p>från {{ name }}</p>
-        <img src="/img/tomten.jpg" alt="">
+        <p> </p>
+        <p> du har köpt {{ vikt }}    {{ name }} mulch som kommer inom en vecka</p>
+        
     </div>
 </main>
 {% endblock %}
